@@ -20,6 +20,7 @@ export MAKE_JOBS=3
 make SUBDIRS=scripts/
 make SUBDIRS=crypto/
 make SUBDIRS=lib/
+make SUBDIRS=security/keys/
 
 cd $KFUZZ_LOCATION
 gcc parse.c kshim.c \
