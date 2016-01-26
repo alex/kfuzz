@@ -9,6 +9,7 @@ LINUX_LOCATION=/vagrant/linux
 cd $LINUX_LOCATION
 make defconfig
 echo "CONFIG_ASN1=y" >> .config
+echo "CONFIG_ASYMMETRIC_KEY_TYPE=y" >> .config
 echo "CONFIG_ASYMMETRIC_PUBLIC_KEY_SUBTYPE=y" >> .config
 echo "CONFIG_PUBLIC_KEY_ALGO_RSA=y" >> .config
 echo "CONFIG_X509_CERTIFICATE_PARSER=y" >> .config
