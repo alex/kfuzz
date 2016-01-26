@@ -23,7 +23,7 @@ make SUBDIRS=lib/
 
 cd $KFUZZ_LOCATION
 gcc parse.c kshim.c \
-    $LINUX_LOCATION/crypto/asymmetric_keys/{asymmetric_type,x509_cert_parser}.o \
+    $LINUX_LOCATION/crypto/asymmetric_keys/{asymmetric_type,x509_cert_parser,x509_rsakey-asn1}.o \
     $LINUX_LOCATION/lib/asn1_decoder.o \
     2>&1 | grep "undefined reference"  | grep -E -o "\`([a-zA-Z0-9_]*)'" | sort | uniq -c | sort -rn
 
